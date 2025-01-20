@@ -1,4 +1,5 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -13,15 +14,19 @@ import androidx.compose.ui.window.application
 @Composable
 @Preview
 fun App() {
-    var text by remember { mutableStateOf("Hello, World!") }
+    var menuItem by mutableStateOf(MenuTopState.TAB_1)
 
     MaterialTheme {
-        Button(onClick = {
-            text = "Hello, Desktop!"
-        }) {
+        Column {
+            MenuTopBar(
+                menuState = menuItem,
+                onMenuItemClick = { menuTopState ->
+                    menuItem = menuTopState
+                }
+            )
 
-            Text(text)
         }
+
     }
 }
 
