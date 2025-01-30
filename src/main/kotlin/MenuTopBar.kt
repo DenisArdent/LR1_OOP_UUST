@@ -62,7 +62,8 @@ fun MenuItem(
 }
 
 enum class MenuTopState(val value: String) {
-    TAB_1("Кнопки"),
-    TAB_2("Тексты и формы"),
-    TAB_3("Элементы выбора и др.")
+    TAB_1("Вкладка 18"),
+    TAB_2("Вкладка 9"),
+    TAB_3("Не вкладка"),
+    TAB_4("Вкладка 3")
 }
